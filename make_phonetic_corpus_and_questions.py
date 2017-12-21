@@ -96,8 +96,6 @@ def wordbreak(s):
         pre, suf = (s[:i], s[i:])
         suf_call = wordbreak(suf)
         if pre in cmu_dict_prime and suf_call is not None:
-            # return [x+y for x,y in iterprod(cmu_dict_prime[pre], wordbreak(suf))]
-            print(pre, suf)
             return cmu_dict_prime[pre] + suf_call
     return None
 
